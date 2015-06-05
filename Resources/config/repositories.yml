@@ -8,22 +8,28 @@
 services:
     kreta_vcs.repository.issue:
         class: %kreta_vcs.repository_issue.class%
-        arguments: [@doctrine.orm.entity_manager, %kreta_issue.issue.class%]
+        arguments: 
+            - @doctrine.orm.entity_manager
+            - %kreta_issue.issue.class%
 
     kreta_vcs.repository.commit:
-        factory_service: doctrine.orm.entity_manager
-        factory_method: getRepository
         class: %kreta_vcs.repository_commit.class%
-        arguments: [%kreta_vcs.commit.class%]
-
+        factory: 
+            - @doctrine.orm.entity_manager
+            - getRepository
+        arguments: 
+            - %kreta_vcs.commit.class%
     kreta_vcs.repository.branch:
-        factory_service: doctrine.orm.entity_manager
-        factory_method: getRepository
         class: %kreta_vcs.repository_branch.class%
-        arguments: [%kreta_vcs.branch.class%]
-
+        factory: 
+            - @doctrine.orm.entity_manager
+            - getRepository
+        arguments: 
+            - %kreta_vcs.branch.class%
     kreta_vcs.repository.repository:
-        factory_service: doctrine.orm.entity_manager
-        factory_method: getRepository
         class: %kreta_vcs.repository_repository.class%
-        arguments: [%kreta_vcs.repository.class%]
+        factory: 
+            - @doctrine.orm.entity_manager
+            - getRepository
+        arguments: 
+            - %kreta_vcs.repository.class%
