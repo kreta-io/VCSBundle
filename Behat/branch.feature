@@ -61,13 +61,13 @@ Feature: Manage vcs branch
       | 1  | 2         | Test project 2 | Test issue 2 | Description2 | user@kreta.com | user@kreta.com | 4    | Open   | 1        | 2014-12-15 |
     And the following repositories exist:
       | id | name                | provider | url                                    | projects |
-      | 0  | kreta-io/kreta      | github   | https://github.com/kreta-io/kreta      | 0,1      |
-      | 1  | kreta-io/CoreBundle | github   | https://github.com/kreta-io/CoreBundle | 0        |
+      | 0  | kreta/kreta      | github   | https://github.com/kreta/kreta      | 0,1      |
+      | 1  | kreta/CoreBundle | github   | https://github.com/kreta/CoreBundle | 0        |
     And the following branches exist:
       | id | name   | repository          | issuesRelated |
-      | 0  | master | kreta-io/kreta      | 0,1           |
-      | 1  | dev    | kreta-io/kreta      | 0,1           |
-      | 2  | master | kreta-io/CoreBundle | 1             |
+      | 0  | master | kreta/kreta      | 0,1           |
+      | 1  | dev    | kreta/kreta      | 0,1           |
+      | 2  | master | kreta/CoreBundle | 1             |
     And the following tokens exist:
       | token          | expiresAt | scope | user            |
       | access-token-0 | null      | user  | user@kreta.com  |
@@ -86,7 +86,7 @@ Feature: Manage vcs branch
         "name": "master",
         "repository": {
           "id": "0",
-          "name": "kreta-io/kreta",
+          "name": "kreta/kreta",
           "provider": "github"
         },
         "_links": {
@@ -102,7 +102,7 @@ Feature: Manage vcs branch
         "name": "dev",
         "repository": {
           "id": "0",
-          "name": "kreta-io/kreta",
+          "name": "kreta/kreta",
           "provider": "github"
         },
         "_links": {
@@ -127,7 +127,7 @@ Feature: Manage vcs branch
         "name": "master",
         "repository": {
           "id": "0",
-          "name": "kreta-io/kreta",
+          "name": "kreta/kreta",
           "provider": "github"
         },
         "_links": {
@@ -143,7 +143,7 @@ Feature: Manage vcs branch
         "name": "dev",
         "repository": {
           "id": "0",
-          "name": "kreta-io/kreta",
+          "name": "kreta/kreta",
           "provider": "github"
         },
         "_links": {
@@ -159,7 +159,7 @@ Feature: Manage vcs branch
         "name": "master",
         "repository": {
           "id": "1",
-          "name": "kreta-io/CoreBundle",
+          "name": "kreta/CoreBundle",
           "provider": "github"
         },
         "_links": {

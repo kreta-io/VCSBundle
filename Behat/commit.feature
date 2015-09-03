@@ -61,18 +61,18 @@ Feature: Manage vcs commit
       | 1  | 2         | Test project 2 | Test issue 2 | Description2 | user@kreta.com | user@kreta.com | 4    | Open   | 1        | 2014-12-15 |
     And the following repositories exist:
       | id | name                | provider | url                                    | projects |
-      | 0  | kreta-io/kreta      | github   | https://github.com/kreta-io/kreta      | 0,1      |
-      | 1  | kreta-io/CoreBundle | github   | https://github.com/kreta-io/CoreBundle | 0        |
+      | 0  | kreta/kreta      | github   | https://github.com/kreta/kreta      | 0,1      |
+      | 1  | kreta/CoreBundle | github   | https://github.com/kreta/CoreBundle | 0        |
     And the following branches exist:
       | id | name   | repository          | issuesRelated |
-      | 0  | master | kreta-io/kreta      | 0,1           |
-      | 1  | dev    | kreta-io/kreta      | 0,1           |
-      | 2  | master | kreta-io/CoreBundle | 1             |
+      | 0  | master | kreta/kreta      | 0,1           |
+      | 1  | dev    | kreta/kreta      | 0,1           |
+      | 2  | master | kreta/CoreBundle | 1             |
     And the following commits exist:
       | id | author         | branch | issuesRelated | message                        | sha                                      | url                                                                               |
-      | 0  | benatespina    | 0      | 0,1           | Initial commit                 | b479a09b437cab7d573ce8625c081c45dc55e5db | https://github.com/kreta-io/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db |
-      | 1  | benatespina    | 1      | 0,1           | Fixed minor bug                | dca9355265a84b1a2c32fc1c1338d02ac52b4fcb | https://github.com/kreta-io/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb |
-      | 2  | gorkalaucirica | 2      | 1             | Added LICENSE and README files | eaea1d638ab3bf569f1cfa7148dbfae9e79322f6 | https://github.com/kreta-io/kreta/commit/eaea1d638ab3bf569f1cfa7148dbfae9e79322f6 |
+      | 0  | benatespina    | 0      | 0,1           | Initial commit                 | b479a09b437cab7d573ce8625c081c45dc55e5db | https://github.com/kreta/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db |
+      | 1  | benatespina    | 1      | 0,1           | Fixed minor bug                | dca9355265a84b1a2c32fc1c1338d02ac52b4fcb | https://github.com/kreta/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb |
+      | 2  | gorkalaucirica | 2      | 1             | Added LICENSE and README files | eaea1d638ab3bf569f1cfa7148dbfae9e79322f6 | https://github.com/kreta/kreta/commit/eaea1d638ab3bf569f1cfa7148dbfae9e79322f6 |
     And the following tokens exist:
       | token          | expiresAt | scope | user            |
       | access-token-0 | null      | user  | user@kreta.com  |
@@ -94,13 +94,13 @@ Feature: Manage vcs commit
           "name": "master",
           "repository": {
             "id": "0",
-            "name": "kreta-io/kreta",
+            "name": "kreta/kreta",
             "provider": "github"
           }
         },
         "message": "Initial commit",
         "sha": "b479a09b437cab7d573ce8625c081c45dc55e5db",
-        "url": "https://github.com/kreta-io/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db",
+        "url": "https://github.com/kreta/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db",
         "_links": {
           "commits": {
             "href": "http://localhost/app_test.php/api/issues/0/vcs-commits"
@@ -123,13 +123,13 @@ Feature: Manage vcs commit
           "name": "dev",
           "repository": {
             "id": "0",
-            "name": "kreta-io/kreta",
+            "name": "kreta/kreta",
             "provider": "github"
           }
         },
         "message": "Fixed minor bug",
         "sha": "dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
-        "url": "https://github.com/kreta-io/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
+        "url": "https://github.com/kreta/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
         "_links": {
           "commits": {
             "href": "http://localhost/app_test.php/api/issues/0/vcs-commits"
@@ -161,13 +161,13 @@ Feature: Manage vcs commit
           "name": "master",
           "repository": {
             "id": "0",
-            "name": "kreta-io/kreta",
+            "name": "kreta/kreta",
             "provider": "github"
           }
         },
         "message": "Initial commit",
         "sha": "b479a09b437cab7d573ce8625c081c45dc55e5db",
-        "url": "https://github.com/kreta-io/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db",
+        "url": "https://github.com/kreta/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db",
         "_links": {
           "commits": {
             "href": "http://localhost/app_test.php/api/issues/1/vcs-commits"
@@ -190,13 +190,13 @@ Feature: Manage vcs commit
           "name": "dev",
           "repository": {
             "id": "0",
-            "name": "kreta-io/kreta",
+            "name": "kreta/kreta",
             "provider": "github"
           }
         },
         "message": "Fixed minor bug",
         "sha": "dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
-        "url": "https://github.com/kreta-io/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
+        "url": "https://github.com/kreta/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
         "_links": {
           "commits": {
             "href": "http://localhost/app_test.php/api/issues/1/vcs-commits"
@@ -219,13 +219,13 @@ Feature: Manage vcs commit
           "name": "master",
           "repository": {
             "id": "1",
-            "name": "kreta-io/CoreBundle",
+            "name": "kreta/CoreBundle",
             "provider": "github"
           }
         },
         "message": "Added LICENSE and README files",
         "sha": "eaea1d638ab3bf569f1cfa7148dbfae9e79322f6",
-        "url": "https://github.com/kreta-io/kreta/commit/eaea1d638ab3bf569f1cfa7148dbfae9e79322f6",
+        "url": "https://github.com/kreta/kreta/commit/eaea1d638ab3bf569f1cfa7148dbfae9e79322f6",
         "_links": {
           "commits": {
             "href": "http://localhost/app_test.php/api/issues/1/vcs-commits"

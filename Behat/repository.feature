@@ -41,8 +41,8 @@ Feature: Manage vcs repository
       | Test project 2 | user4@kreta.com | ROLE_PARTICIPANT |
     And the following repositories exist:
       | id | name                | provider | url                                    | projects |
-      | 0  | kreta-io/kreta      | github   | https://github.com/kreta-io/kreta      | 0,1      |
-      | 1  | kreta-io/CoreBundle | github   | https://github.com/kreta-io/CoreBundle | 0        |
+      | 0  | kreta/kreta      | github   | https://github.com/kreta/kreta      | 0,1      |
+      | 1  | kreta/CoreBundle | github   | https://github.com/kreta/CoreBundle | 0        |
     And the following tokens exist:
       | token          | expiresAt | scope | user            |
       | access-token-0 | null      | user  | user@kreta.com  |
@@ -58,7 +58,7 @@ Feature: Manage vcs repository
     """
       [{
         "id": "0",
-        "name": "kreta-io/kreta",
+        "name": "kreta/kreta",
         "provider": "github",
         "_links": {
           "repositories": {
@@ -70,7 +70,7 @@ Feature: Manage vcs repository
         }
       }, {
         "id": "1",
-        "name": "kreta-io/CoreBundle",
+        "name": "kreta/CoreBundle",
         "provider": "github",
         "_links": {
           "repositories": {
@@ -91,7 +91,7 @@ Feature: Manage vcs repository
     """
       [{
         "id": "0",
-        "name": "kreta-io/kreta",
+        "name": "kreta/kreta",
         "provider": "github",
         "_links": {
           "repositories": {

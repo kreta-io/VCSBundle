@@ -1,14 +1,14 @@
 # Kreta VCS Bundle
 > VCS bundle of Kreta: modern project manager for software development.
 
-[![Build Status](https://travis-ci.org/kreta-io/VCSBundle.svg?branch=master)](https://travis-ci.org/kreta-io/VCSBundle)
-[![Coverage Status](https://img.shields.io/coveralls/kreta-io/VCSBundle.svg)](https://coveralls.io/r/kreta-io/VCSBundle)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kreta-io/VCSBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kreta-io/VCSBundle/?branch=master)
-[![HHVM Status](http://hhvm.h4cc.de/badge/kreta/VCS-bundle.svg)](http://hhvm.h4cc.de/package/kreta/VCS-bundle)
-[![Total Downloads](https://poser.pugx.org/kreta/VCS-bundle/downloads)](https://packagist.org/packages/kreta/VCS-bundle)
+[![Build Status](https://travis-ci.org/kreta-plugins/VCSBundle.svg?branch=master)](https://travis-ci.org/kreta-plugins/VCSBundle)
+[![Coverage Status](https://img.shields.io/coveralls/kreta-plugins/VCSBundle.svg)](https://coveralls.io/r/kreta-plugins/VCSBundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kreta-plugins/VCSBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kreta-plugins/VCSBundle/?branch=master)
+[![HHVM Status](http://hhvm.h4cc.de/badge/kreta-plugins/VCS-bundle.svg)](http://hhvm.h4cc.de/package/kreta-plugins/VCS-bundle)
+[![Total Downloads](https://poser.pugx.org/kreta-plugins/VCS-bundle/downloads)](https://packagist.org/packages/kreta-plugins/VCS-bundle)
 
-[![Latest Stable Version](https://poser.pugx.org/kreta/VCS-bundle/v/stable.svg)](https://packagist.org/packages/kreta/VCS-bundle)
-[![Latest Unstable Version](https://poser.pugx.org/kreta/VCS-bundle/v/unstable.svg)](https://packagist.org/packages/kreta/VCS-bundle)
+[![Latest Stable Version](https://poser.pugx.org/kreta-plugins/VCS-bundle/v/stable.svg)](https://packagist.org/packages/kreta-plugins/VCS-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/kreta-plugins/VCS-bundle/v/unstable.svg)](https://packagist.org/packages/kreta-plugins/VCS-bundle)
 
 Tests
 -----
@@ -40,7 +40,7 @@ documentation. If you are submitting a pull request, please follow the guideline
 in the [Submitting a Patch][3] section and use the [Pull Request Template][4].
 
 If you have any doubt or maybe you want to share some opinion, you can use our **Gitter chat**.
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kreta-io/kreta?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kreta/kreta?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [1]: http://www.phpspec.net/
 [2]: http://symfony.com/doc/current/contributing/code/index.html
@@ -56,4 +56,4 @@ Kreta Core Bundle is created by:
 
 Licensing Options
 -----------------
-[![License](https://poser.pugx.org/kreta/VCS-bundle/license.svg)](https://github.com/kreta-io/kreta/blob/master/LICENSE)
+[![License](https://poser.pugx.org/kreta-plugins/VCS-bundle/license.svg)](https://github.com/kreta/kreta-plugins/blob/master/LICENSE)
