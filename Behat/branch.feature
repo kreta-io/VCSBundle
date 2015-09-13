@@ -77,7 +77,7 @@ Feature: Manage vcs branch
 
   Scenario: Getting all the vcs branches of issue 0
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/vcs-branches"
+    When I send a GET request to "/api/issues/0/vcs-branches"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -91,10 +91,10 @@ Feature: Manage vcs branch
         },
         "_links": {
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/0/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/0/vcs-branches"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/0"
+            "href": "http://kreta.test:8000/api/issues/0"
           }
         }
       }, {
@@ -107,10 +107,10 @@ Feature: Manage vcs branch
         },
         "_links": {
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/0/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/0/vcs-branches"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/0"
+            "href": "http://kreta.test:8000/api/issues/0"
           }
         }
       }]
@@ -118,7 +118,7 @@ Feature: Manage vcs branch
 
   Scenario: Getting all the vcs branches of issue 1
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/1/vcs-branches"
+    When I send a GET request to "/api/issues/1/vcs-branches"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -132,10 +132,10 @@ Feature: Manage vcs branch
         },
         "_links": {
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-branches"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/1"
+            "href": "http://kreta.test:8000/api/issues/1"
           }
         }
       }, {
@@ -148,10 +148,10 @@ Feature: Manage vcs branch
         },
         "_links": {
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-branches"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/1"
+            "href": "http://kreta.test:8000/api/issues/1"
           }
         }
       }, {
@@ -164,10 +164,10 @@ Feature: Manage vcs branch
         },
         "_links": {
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-branches"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/1"
+            "href": "http://kreta.test:8000/api/issues/1"
           }
         }
       }]
@@ -175,7 +175,7 @@ Feature: Manage vcs branch
 
   Scenario: Getting all the vcs branches with user which is not a project participant
     Given I am authenticating with "access-token-3" token
-    When I send a GET request to "/app_test.php/api/issues/0/vcs-branches"
+    When I send a GET request to "/api/issues/0/vcs-branches"
     Then the response code should be 403
     And the response should contain json:
     """
@@ -186,7 +186,7 @@ Feature: Manage vcs branch
 
   Scenario: Getting all the vcs branches of unknown issue
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/unknown-issue/vcs-branches"
+    When I send a GET request to "/api/issues/unknown-issue/vcs-branches"
     Then the response code should be 404
     And the response should contain json:
     """

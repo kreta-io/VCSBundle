@@ -52,7 +52,7 @@ Feature: Manage vcs repository
 
   Scenario: Getting all the vcs repositories of project 0
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/projects/0/vcs-repositories"
+    When I send a GET request to "/api/projects/0/vcs-repositories"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -62,10 +62,10 @@ Feature: Manage vcs repository
         "provider": "github",
         "_links": {
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/0/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/0/vcs-repositories"
           },
           "project": {
-            "href": "http://localhost/app_test.php/api/projects/0"
+            "href": "http://kreta.test:8000/api/projects/0"
           }
         }
       }, {
@@ -74,10 +74,10 @@ Feature: Manage vcs repository
         "provider": "github",
         "_links": {
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/0/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/0/vcs-repositories"
           },
           "project": {
-            "href": "http://localhost/app_test.php/api/projects/0"
+            "href": "http://kreta.test:8000/api/projects/0"
           }
         }
       }]
@@ -85,7 +85,7 @@ Feature: Manage vcs repository
 
   Scenario: Getting all the vcs repositories of project 1
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/projects/1/vcs-repositories"
+    When I send a GET request to "/api/projects/1/vcs-repositories"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -95,10 +95,10 @@ Feature: Manage vcs repository
         "provider": "github",
         "_links": {
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/1/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/1/vcs-repositories"
           },
           "project": {
-            "href": "http://localhost/app_test.php/api/projects/1"
+            "href": "http://kreta.test:8000/api/projects/1"
           }
         }
       }]
@@ -106,7 +106,7 @@ Feature: Manage vcs repository
 
   Scenario: Getting all the vcs repositories with user which is not a project participant
     Given I am authenticating with "access-token-3" token
-    When I send a GET request to "/app_test.php/api/projects/0/vcs-repositories"
+    When I send a GET request to "/api/projects/0/vcs-repositories"
     Then the response code should be 403
     And the response should contain json:
     """
@@ -117,7 +117,7 @@ Feature: Manage vcs repository
 
   Scenario: Getting all the vcs repositories of unknown project
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/projects/unknown-project/vcs-repositories"
+    When I send a GET request to "/api/projects/unknown-project/vcs-repositories"
     Then the response code should be 404
     And the response should contain json:
     """

@@ -82,7 +82,7 @@ Feature: Manage vcs commit
 
   Scenario: Getting all the vcs commits of issue 0
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/vcs-commits"
+    When I send a GET request to "/api/issues/0/vcs-commits"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -103,16 +103,16 @@ Feature: Manage vcs commit
         "url": "https://github.com/kreta/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db",
         "_links": {
           "commits": {
-            "href": "http://localhost/app_test.php/api/issues/0/vcs-commits"
+            "href": "http://kreta.test:8000/api/issues/0/vcs-commits"
           },
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/0/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/0/vcs-branches"
           },
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/0/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/0/vcs-repositories"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/0"
+            "href": "http://kreta.test:8000/api/issues/0"
           }
         }
       }, {
@@ -132,16 +132,16 @@ Feature: Manage vcs commit
         "url": "https://github.com/kreta/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
         "_links": {
           "commits": {
-            "href": "http://localhost/app_test.php/api/issues/0/vcs-commits"
+            "href": "http://kreta.test:8000/api/issues/0/vcs-commits"
           },
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/0/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/0/vcs-branches"
           },
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/0/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/0/vcs-repositories"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/0"
+            "href": "http://kreta.test:8000/api/issues/0"
           }
         }
       }]
@@ -149,7 +149,7 @@ Feature: Manage vcs commit
 
   Scenario: Getting all the vcs commits of project 0 and issue 1
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/1/vcs-commits"
+    When I send a GET request to "/api/issues/1/vcs-commits"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -170,16 +170,16 @@ Feature: Manage vcs commit
         "url": "https://github.com/kreta/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db",
         "_links": {
           "commits": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-commits"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-commits"
           },
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-branches"
           },
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/1/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/1/vcs-repositories"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/1"
+            "href": "http://kreta.test:8000/api/issues/1"
           }
         }
       }, {
@@ -199,16 +199,16 @@ Feature: Manage vcs commit
         "url": "https://github.com/kreta/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb",
         "_links": {
           "commits": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-commits"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-commits"
           },
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-branches"
           },
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/1/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/1/vcs-repositories"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/1"
+            "href": "http://kreta.test:8000/api/issues/1"
           }
         }
       }, {
@@ -228,16 +228,16 @@ Feature: Manage vcs commit
         "url": "https://github.com/kreta/kreta/commit/eaea1d638ab3bf569f1cfa7148dbfae9e79322f6",
         "_links": {
           "commits": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-commits"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-commits"
           },
           "branches": {
-            "href": "http://localhost/app_test.php/api/issues/1/vcs-branches"
+            "href": "http://kreta.test:8000/api/issues/1/vcs-branches"
           },
           "repositories": {
-            "href": "http://localhost/app_test.php/api/projects/1/vcs-repositories"
+            "href": "http://kreta.test:8000/api/projects/1/vcs-repositories"
           },
           "issue": {
-            "href": "http://localhost/app_test.php/api/issues/1"
+            "href": "http://kreta.test:8000/api/issues/1"
           }
         }
       }]
@@ -245,7 +245,7 @@ Feature: Manage vcs commit
 
   Scenario: Getting all the vcs commits with user which is not a project participant
     Given I am authenticating with "access-token-3" token
-    When I send a GET request to "/app_test.php/api/issues/0/vcs-commits"
+    When I send a GET request to "/api/issues/0/vcs-commits"
     Then the response code should be 403
     And the response should contain json:
     """
@@ -256,7 +256,7 @@ Feature: Manage vcs commit
 
   Scenario: Getting all the vcs commits of unknown issue
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/unknown-issue/vcs-commits"
+    When I send a GET request to "/api/issues/unknown-issue/vcs-commits"
     Then the response code should be 404
     And the response should contain json:
     """
