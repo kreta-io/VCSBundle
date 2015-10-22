@@ -40,7 +40,7 @@ Feature: Manage vcs repository
       | Test project 2 | user2@kreta.com | ROLE_PARTICIPANT |
       | Test project 2 | user4@kreta.com | ROLE_PARTICIPANT |
     And the following repositories exist:
-      | id | name                | provider | url                                    | projects |
+      | id | name             | provider | url                                 | projects |
       | 0  | kreta/kreta      | github   | https://github.com/kreta/kreta      | 0,1      |
       | 1  | kreta/CoreBundle | github   | https://github.com/kreta/CoreBundle | 0        |
     And the following tokens exist:

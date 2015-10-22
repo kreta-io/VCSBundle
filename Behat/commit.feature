@@ -34,14 +34,6 @@ Feature: Manage vcs commit
       | 3  | Blocker | Test project 1 |
       | 4  | Low     | Test project 2 |
       | 5  | Medium  | Test project 2 |
-    And the following issue types exist:
-      | id | name        | project        |
-      | 0  | Bug         | Test project 1 |
-      | 1  | Epic        | Test project 1 |
-      | 2  | New feature | Test project 1 |
-      | 3  | Bug         | Test project 2 |
-      | 4  | Error       | Test project 2 |
-      | 5  | Story       | Test project 2 |
     And the following statuses exist:
       | id | color   | name        | workflow   |
       | 0  | #27ae60 | Open        | Workflow 1 |
@@ -56,20 +48,20 @@ Feature: Manage vcs commit
       | Test project 2 | user2@kreta.com | ROLE_PARTICIPANT |
       | Test project 2 | user4@kreta.com | ROLE_PARTICIPANT |
     And the following issues exist:
-      | id | numericId | project        | title        | description  | reporter       | assignee       | type | status | priority | createdAt  |
-      | 0  | 1         | Test project 1 | Test issue 1 | Description  | user@kreta.com | user@kreta.com | 2    | Open   | 1        | 2014-12-15 |
-      | 1  | 2         | Test project 2 | Test issue 2 | Description2 | user@kreta.com | user@kreta.com | 4    | Open   | 1        | 2014-12-15 |
+      | id | numericId | project        | title        | description  | reporter       | assignee       | status | priority | createdAt  |
+      | 0  | 1         | Test project 1 | Test issue 1 | Description  | user@kreta.com | user@kreta.com | Open   | 1        | 2014-12-15 |
+      | 1  | 2         | Test project 2 | Test issue 2 | Description2 | user@kreta.com | user@kreta.com | Open   | 1        | 2014-12-15 |
     And the following repositories exist:
-      | id | name                | provider | url                                    | projects |
+      | id | name             | provider | url                                 | projects |
       | 0  | kreta/kreta      | github   | https://github.com/kreta/kreta      | 0,1      |
       | 1  | kreta/CoreBundle | github   | https://github.com/kreta/CoreBundle | 0        |
     And the following branches exist:
-      | id | name   | repository          | issuesRelated |
+      | id | name   | repository       | issuesRelated |
       | 0  | master | kreta/kreta      | 0,1           |
       | 1  | dev    | kreta/kreta      | 0,1           |
       | 2  | master | kreta/CoreBundle | 1             |
     And the following commits exist:
-      | id | author         | branch | issuesRelated | message                        | sha                                      | url                                                                               |
+      | id | author         | branch | issuesRelated | message                        | sha                                      | url                                                                            |
       | 0  | benatespina    | 0      | 0,1           | Initial commit                 | b479a09b437cab7d573ce8625c081c45dc55e5db | https://github.com/kreta/kreta/commit/b479a09b437cab7d573ce8625c081c45dc55e5db |
       | 1  | benatespina    | 1      | 0,1           | Fixed minor bug                | dca9355265a84b1a2c32fc1c1338d02ac52b4fcb | https://github.com/kreta/kreta/commit/dca9355265a84b1a2c32fc1c1338d02ac52b4fcb |
       | 2  | gorkalaucirica | 2      | 1             | Added LICENSE and README files | eaea1d638ab3bf569f1cfa7148dbfae9e79322f6 | https://github.com/kreta/kreta/commit/eaea1d638ab3bf569f1cfa7148dbfae9e79322f6 |
