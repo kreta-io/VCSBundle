@@ -11,6 +11,9 @@ services:
 
     kreta_vcs.serializer.github.commit:
         class: Kreta\Component\VCS\Serializer\Github\CommitSerializer
-        arguments: [@kreta_vcs.factory.commit, @kreta_vcs.repository.repository, @kreta_vcs.repository.branch]
+        arguments:
+            - '@kreta_vcs.factory.commit'
+            - '@kreta_vcs.repository.repository'
+            - '@kreta_vcs.repository.branch'
         tags:
             - { name: kreta_vcs.serializer, provider: github, event: push }

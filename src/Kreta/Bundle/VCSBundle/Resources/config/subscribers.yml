@@ -8,6 +8,7 @@
 services:
     kreta_vcs.event_subscriber.doctrine:
         class: %kreta_vcs.event_subscriber_doctrine.class%
-        arguments: [@event_dispatcher]
+        arguments:
+            - '@event_dispatcher'
         tags:
             - { name: doctrine.event_subscriber }

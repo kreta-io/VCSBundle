@@ -8,8 +8,10 @@
 services:
     kreta_vcs.matcher.commit:
         class: %kreta_vcs.matcher_commit.class%
-        arguments: [@kreta_vcs.repository.issue]
+        arguments:
+            - '@kreta_vcs.repository.issue'
 
     kreta_vcs.matcher.branch:
         class: %kreta_vcs.matcher_branch.class%
-        arguments: [@kreta_vcs.repository.issue]
+        arguments:
+            - '@kreta_vcs.repository.issue'

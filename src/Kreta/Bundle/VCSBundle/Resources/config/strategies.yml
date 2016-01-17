@@ -8,4 +8,5 @@
 services:
     kreta_vcs.webhook_strategy.github:
         class: Kreta\Component\VCS\WebhookStrategy\GithubWebhookStrategy
-        arguments: [@kreta_vcs.registry.serializer]
+        arguments:
+            - '@kreta_vcs.registry.serializer'
