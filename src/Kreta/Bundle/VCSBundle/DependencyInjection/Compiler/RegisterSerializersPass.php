@@ -18,6 +18,9 @@ use Symfony\Component\DependencyInjection\Reference;
 
 /**
  * Class RegisterSerializersPass.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class RegisterSerializersPass implements CompilerPassInterface
 {

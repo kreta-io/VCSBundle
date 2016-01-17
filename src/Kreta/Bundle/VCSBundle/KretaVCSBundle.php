@@ -18,6 +18,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Class KretaVCSBundle.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class KretaVCSBundle extends Bundle
 {

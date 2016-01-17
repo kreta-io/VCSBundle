@@ -20,25 +20,28 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class CommitController.
+ * Class BranchController.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
-class CommitController extends Controller
+class BranchController extends Controller
 {
     /**
-     * Returns all commits of issue id given.
+     * Returns all branches of issue id given.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request The request
      * @param string                                    $issueId The issue id
      *
-     * @ApiDoc(resource = true, statusCodes = {200, 403, 404})
-     * @Get("/issues/{issueId}/vcs-commits")
-     * @View(statusCode=200, serializerGroups={"commitList"})
+     * @ApiDoc(resource = true, statusCodes = {200, 403, 403})
+     * @Get("/issues/{issueId}/vcs-branches")
+     * @View(statusCode=200, serializerGroups={"branchList"})
      * @Issue()
      *
-     * @return \Kreta\Component\VCS\Model\Interfaces\CommitInterface[]
+     * @return \Kreta\Component\VCS\Model\Interfaces\BranchInterface[]
      */
-    public function getCommitsAction(Request $request, $issueId)
+    public function getBranchesAction(Request $request, $issueId)
     {
-        return $this->get('kreta_vcs.repository.commit')->findByIssue($request->get('issue'));
+        return $this->get('kreta_vcs.repository.branch')->findByIssue($request->get('issue'));
     }
 }

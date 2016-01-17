@@ -16,6 +16,9 @@ use Kreta\Bundle\VCSBundle\Controller\Webhook\Abstracts\AbstractWebhookControlle
 
 /**
  * Class GithubWebhookController.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class GithubWebhookController extends AbstractWebhookController
 {

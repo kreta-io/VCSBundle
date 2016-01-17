@@ -21,6 +21,9 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * Responsible for exposing the entrance point for webhooks.
  * Each provider should have one controller with getWebhookStrategy() implemented.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 abstract class AbstractWebhookController extends Controller
 {

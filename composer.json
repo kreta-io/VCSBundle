@@ -62,12 +62,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Kreta\\Bundle\\VCSBundle\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "spec\\Kreta\\Bundle\\VCSBundle\\": "spec/"
-        }
+            "Kreta\\Bundle\\VCSBundle\\": "src/Kreta/Bundle/VCSBundle/"
+        },
+        "exclude-from-classmap": ["/spec/"]
     }
 }

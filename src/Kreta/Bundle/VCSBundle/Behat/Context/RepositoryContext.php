@@ -18,6 +18,9 @@ use Kreta\Component\VCS\Model\Repository;
 
 /**
  * Class RepositoryContext.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class RepositoryContext extends DefaultContext
 {
