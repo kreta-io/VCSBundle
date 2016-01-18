@@ -14,7 +14,7 @@ Kreta\Component\VCS\Model\Commit:
                 route: get_issues_commits
                 parameters:
                     issueId: expr(object.getIssuesRelated()[0].getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [commitList]
         -
@@ -23,7 +23,7 @@ Kreta\Component\VCS\Model\Commit:
                 route: get_issues_branches
                 parameters:
                     issueId: expr(object.getIssuesRelated()[0].getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [commitList]
         -
@@ -32,7 +32,7 @@ Kreta\Component\VCS\Model\Commit:
                 route: get_projects_repositories
                 parameters:
                     projectId: expr(object.getIssuesRelated()[0].getProject().getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [commitList]
         -
@@ -41,7 +41,7 @@ Kreta\Component\VCS\Model\Commit:
                 route: get_issue
                 parameters:
                     issueId: expr(object.getIssuesRelated()[0].getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [commitList]
     properties:

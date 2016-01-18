@@ -14,7 +14,7 @@ Kreta\Component\VCS\Model\Branch:
                 route: get_issues_branches
                 parameters:
                     issueId: expr(object.getIssuesRelated()[0].getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [branchList]
         -
@@ -23,7 +23,7 @@ Kreta\Component\VCS\Model\Branch:
                 route: get_issue
                 parameters:
                     issueId: expr(object.getIssuesRelated()[0].getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [branchList]
     properties:

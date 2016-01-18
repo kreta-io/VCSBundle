@@ -14,7 +14,7 @@ Kreta\Component\VCS\Model\Repository:
                 route: get_projects_repositories
                 parameters:
                     projectId: expr(object.getProjects()[0].getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [repositoryList]
         -
@@ -23,7 +23,7 @@ Kreta\Component\VCS\Model\Repository:
                 route: get_project
                 parameters:
                     projectId: expr(object.getProjects()[0].getId())
-                absolute: true
+                absolute: 0
             exclusion:
                 groups: [repositoryList]
     properties:
