@@ -7,7 +7,7 @@
 
 services:
     kreta_vcs.registry.serializer:
-        class: %kreta_vcs.registry_serializer.class%
+        class: '%kreta_vcs.registry_serializer.class%'
 
     kreta_vcs.serializer.github.commit:
         class: Kreta\Component\VCS\Serializer\Github\CommitSerializer

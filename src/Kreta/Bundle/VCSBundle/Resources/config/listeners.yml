@@ -7,7 +7,7 @@
 
 services:
     kreta_vcs.event_listener.commit:
-        class: %kreta_vcs.event_listener_commit.class%
+        class: '%kreta_vcs.event_listener_commit.class%'
         arguments:
             - '@kreta_vcs.matcher.commit'
             - '@kreta_vcs.repository.commit'
@@ -15,7 +15,7 @@ services:
             - { name: kernel.event_listener, event: kreta_vcs.event.commit.new, method: newCommit }
 
     kreta_vcs.event_listener.branch:
-            class: %kreta_vcs.event_listener_branch.class%
+            class: '%kreta_vcs.event_listener_branch.class%'
             arguments:
                 - '@kreta_vcs.matcher.branch'
                 - '@kreta_vcs.repository.branch'
